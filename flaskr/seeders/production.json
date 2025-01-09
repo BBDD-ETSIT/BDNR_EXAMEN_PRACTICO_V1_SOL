@@ -1,0 +1,134 @@
+[
+  {
+    "name": "Castle Rock Entertainment",
+    "alias": "castle",
+    "thumbnail": "https://tinyurl.com/mr2pfp9f",
+    "country": "United States",
+    "foundation_year": 1987,
+    "headquarters": "Burbank, California",
+    "CEO": "Martin Shafer",
+    "website": "https://www.warnerbros.com/studio/divisions/castle-rock-entertainment",
+    "number_of_awards": 14,
+    "notable_movies": [
+      "Misery",
+      "The Green Mile",
+      "Seinfeld",
+      "The Shawshank Redemption"
+    ],
+    "contact_info": {
+      "address": "4000 Warner Blvd, Burbank, CA 91522",
+      "phone": "+1-818-954-3000",
+      "email": "info@castlerockent.com"
+    }
+  },
+  {
+    "name": "Paramount Pictures",
+    "alias":"paramount",
+    "thumbnail": "https://tinyurl.com/rprkk5f7",
+    "country": "United States",
+    "foundation_year": 1912,
+    "headquarters": "Hollywood, California",
+    "CEO": "Brian Robbins",
+    "website": "https://www.paramount.com",
+    "number_of_awards": 52,
+    "notable_movies": [
+      "Titanic",
+      "Forrest Gump",
+      "Transformers",
+      "The Godfather"
+    ],
+    "contact_info": {
+      "address": "5555 Melrose Ave, Los Angeles, CA 90038",
+      "phone": "+1-323-956-5000",
+      "email": "info@paramount.com"
+    }
+  },
+  {
+    "name": "Warner Bros. Pictures",
+    "alias": "warner",
+    "thumbnail": "https://tinyurl.com/4fvkbdwh",
+    "country": "United States",
+    "foundation_year": 1923,
+    "headquarters": "Burbank, California",
+    "CEO": "Pam Lifford",
+    "website": "https://www.warnerbros.com",
+    "number_of_awards": 100,
+    "notable_movies": [
+      "Harry Potter",
+      "The Matrix",
+      "Joker",
+      "The Dark Knight"
+    ],
+    "contact_info": {
+      "address": "4000 Warner Blvd, Burbank, CA 91522",
+      "phone": "+1-818-954-3000",
+      "email": "info@warnerbros.com"
+    }
+  },
+  {
+    "name": "Legendary Pictures",
+    "alias":"legendary",
+    "thumbnail": "https://tinyurl.com/4efwjumx" ,
+    "country": "United States",
+    "foundation_year": 2000,
+    "headquarters": "Burbank, California",
+    "CEO": "Joshua Grode",
+    "website": "https://www.legendary.com",
+    "number_of_awards": 25,
+    "notable_movies": [
+      "Man of Steel",
+      "Jurassic World",
+      "Dune",
+      "Inception"
+    ],
+    "contact_info": {
+      "address": "2900 W Alameda Ave, Burbank, CA 91505",
+      "phone": "+1-818-688-7003",
+      "email": "contact@legendary.com"
+    }
+  },
+  {
+    "name": "Syncopy",
+    "alias": "syncopy",
+    "thumbnail": "https://tinyurl.com/4fmyrypa",
+    "country": "England",
+    "foundation_year": 2001,
+    "headquarters": "London",
+    "CEO": "Emma Thomas",
+    "website": "https://www.syncopyfilms.com",
+    "number_of_awards": 12,
+    "notable_movies": [
+      "Dunkirk",
+      "Tenet",
+      "Memento",
+      "Inception"
+    ],
+    "contact_info": {
+      "address": "30 Golden Square, London W1F 9LD, UK",
+      "phone": "+44-20-7494-7310",
+      "email": "info@syncopyfilms.co.uk"
+    }
+  },
+  {
+    "name": "Fox 2000 Pictures",
+    "alias":"fox",
+    "thumbnail": "https://tinyurl.com/y3yz3ch6",
+    "country": "United States",
+    "foundation_year": 1994,
+    "headquarters": "Century City, California",
+    "CEO": "Elizabeth Gabler",
+    "website": "https://www.foxmovies.com",
+    "number_of_awards": 15,
+    "notable_movies": [
+      "Life of Pi",
+      "The Fault in Our Stars",
+      "Marley & Me",
+      "Fight Club"
+    ],
+    "contact_info": {
+      "address": "10201 W Pico Blvd, Los Angeles, CA 90064",
+      "phone": "+1-310-369-1000",
+      "email": "info@fox.com"
+    }
+  }
+]

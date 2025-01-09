@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block sidebar %}
+    <div>
+      <h2><b>Filtros</b></h2>
+    </div>
+    <hr>
+    <div class="" id="myTabContent">
+      <div class="" id="filterByTitle" aria-labelledby="home-tab">
+          <form method="GET" action="/productions/productions_filtered">
+            <fieldset>
+                <div class="form-group">
+                <label>Buscar por rango de número de Galardones</label>
+                <label>Mínimo</label>
+                <input type="text" class="form-control" name="min" placeholder="min">
+                <label>Máximo</label>
+                <input type="text" class="form-control" name="max" placeholder="max">
+                </div>
+                <button type="submit" class="btn btn-primary filter-button"><b>Filtrar</b></button>
+            </fieldset>
+          </form>
+      </div>
+      <div class="" id="filterByCountry" aria-labelledby="home-tab">
+          <form method="GET" action="/productions">
+            <fieldset>
+                <div class="form-group">
+                <label>Buscar por país</label>
+                <input type="text" class="form-control" name="country" placeholder="País">
+                </div>
+                <button type="submit" class="btn btn-primary filter-button"><b>Filtrar</b></button>
+            </fieldset>
+          </form>
+      </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+        <div class="row content-info">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+              <li class="breadcrumb-item active"><a href="/productions"><b>Productoras</b></a></li>
+            </ol>
+        </div>
+        <div class="row content-info">
+          <div class="mycontent">
+            {% if productions %}
+              {% for production in productions -%}
+                <div class="card">
+                  <div class="card-img">
+                    <a class="" href='/production/{{ production.alias }}'>
+                    <img class="" src="{{ production.thumbnail }}" alt="Card image cap"></a>
+                  </div>
+                  <p class="card-title"><b>Nombre:</b> {{ production.name }}</p>
+                  <p><b>País:</b> {{ production.country }}</p>
+                  <p><b>Año de fundación: </b> {{ production.foundation_year }}</p>
+                  <p><b>Número de premios:</b> {{ production.number_of_awards }}</p>
+                  <a class="btn btn-primary bt-info-bottom" href='/productions/{{ production.alias }}'><b>Ver Información</b></a>
+                </div>
+              {% endfor -%}
+            {% endif %}
+          </div>
+        </div>
+
+{% endblock %}

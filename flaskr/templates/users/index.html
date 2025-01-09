@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+
+{% block sidebar %}
+    <div>
+      <h2><b>Filtros</b></h2>
+    </div>
+    <hr>
+    <div class="" id="myTabContent">
+      <div class="" id="filterByName" aria-labelledby="home-tab">
+          <form method="GET" action="/users">
+            <fieldset>
+                <div class="form-group">
+                <label>Buscar por nombre</label>
+                <input type="text" class="form-control" name="name" placeholder="Nombre del usuario">
+                </div>
+                <button type="submit" class="btn btn-primary filter-button"><b>Filtrar</b></button>
+            </fieldset>
+          </form>
+      </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+        <div class="row content-info">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+              <li class="breadcrumb-item active"><a href="/users"><b>Usuarios</b></a></li>
+            </ol>
+        </div>
+        <div class="row content-info">
+          <div class="mycontent">
+            {% if users %}
+              {% for user in users -%}
+                <div class="card card-user">
+                  <div class="card-body">
+                    <h5 class="card-title"><b>Username: {{ user.username }}</b></h5>
+                    <h5 class="card-title"><b>Nombre: {{ user.name + " " + user.surname}}</b></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Email: {{ user.email }}</h6>
+                  </div>
+                  <a class="btn btn-primary bt-info-bottom" href='/users/{{ user.username }}'><b>Ver Información</b></a>
+                </div>
+              {% endfor -%}
+            {% else %}
+              <p>No se han encontrado usuarios</p>
+            {% endif %}
+          </div>
+        </div>
+
+{% endblock %}

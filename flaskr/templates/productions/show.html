@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+
+{% block sidebar %}
+    <div>
+      <h2><b>Filtros</b></h2>
+    </div>
+    <hr>
+    <div class="" id="myTabContent">
+      <div class="" id="filterByTitle" aria-labelledby="home-tab">
+          <form method="GET" action="/productions/productions_filtered">
+            <fieldset>
+                <div class="form-group">
+                <label>Buscar por rango de número de Galardones</label>
+                <label>Mínimo</label>
+                <input type="text" class="form-control" name="min" placeholder="min">
+                <label>Máximo</label>
+                <input type="text" class="form-control" name="max" placeholder="max">
+                </div>
+                <button type="submit" class="btn btn-primary filter-button"><b>Filtrar</b></button>
+            </fieldset>
+          </form>
+      </div>
+      <div class="" id="filterByCountry" aria-labelledby="home-tab">
+          <form method="GET" action="/productions">
+            <fieldset>
+                <div class="form-group">
+                <label>Buscar por país</label>
+                <input type="text" class="form-control" name="country" placeholder="País">
+                </div>
+                <button type="submit" class="btn btn-primary filter-button"><b>Filtrar</b></button>
+            </fieldset>
+          </form>
+      </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+        <div class="row content-info">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+              <li class="breadcrumb-item"><a href="/productions"><b>Productoras</b></a></li>
+              <li class="breadcrumb-item active"><a href="/productions/{{ production.alias }}"><b>{{ production.alias }}</b></a></li>
+            </ol>
+        </div>
+        <div class="row moviecontent">
+
+            {% if production %}
+                <div class="movieposterdiv">
+                    <img class="movieposter" src="{{ production.thumbnail }}" alt="Card image cap">
+                </div>
+                <div class="moviedata">
+                    <h2><b>{{ production.name }}</b></h2>
+                    <p><b>País:</b> {{ production.country }}</p>
+                    <p><b>Año de fundación: </b> {{ production.foundation_year }} minutos</p>
+                    <p><b>Número de premios:</b> {{ production.number_of_awards }}</p>
+                    <p><b>Películas Destacadas:</b>
+                    {% for notable_movie in production.notable_movies %}
+                        {{ notable_movie  }}
+                    {% endfor %}
+                    </p>
+                    <p><b>Info de Contacto:</b>
+                        <div class="review">
+                            <p><b>Dirección:</b> {{ production.contact_info.address }}</p>
+                            <p><b>Teléfono:</b> {{ production.contact_info.phone }}</p>
+                            <p><b>email:</b> {{ production.contact_info.email }}</p>
+                        </div>
+		
+		    {% endif %}
+
+        </div>
+
+        <br/><br/>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#addreviewbutton").click(function(){
+                    $("#reviewform").toggle();
+                });
+            });
+          </script>
+
+{% endblock %}
