@@ -1,0 +1,11 @@
+version: '3'
+services:
+  mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_DATABASE: moviesbdnr
+    volumes:
+      - "./mongo-db:/data/db"
+      - "./flaskr/seeders:/seeders"
+    ports:
+      - "27017:27017"
